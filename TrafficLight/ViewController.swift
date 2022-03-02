@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet var greenLight: UIView!
     @IBOutlet var nextLightButton: UIButton!
     
-    var nextLight = TrafficLight.red
+    private var nextLight = TrafficLight.red
     
     enum TrafficLight {
         case red
