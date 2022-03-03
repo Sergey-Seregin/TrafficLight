@@ -14,19 +14,13 @@ class ViewController: UIViewController {
     @IBOutlet var nextLightButton: UIButton!
     
     private var nextLight = TrafficLight.red
-    
-    enum TrafficLight {
-        case red
-        case yellow
-        case green
-    }
-    
+       
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        redLight.layer.cornerRadius = 50
-        yellowLight.layer.cornerRadius = 50
-        greenLight.layer.cornerRadius = 50
+        redLight.layer.cornerRadius = redLight.frame.width / 2
+        yellowLight.layer.cornerRadius = yellowLight.frame.width / 2
+        greenLight.layer.cornerRadius = greenLight.frame.width / 2
         
         turnOffLights()
     }
@@ -38,19 +32,27 @@ class ViewController: UIViewController {
         switch nextLight {
         case .red:
             nextLight = .yellow
-            redLight.backgroundColor = UIColor.red.withAlphaComponent(1)
+            redLight.alpha = 1
         case .yellow:
             nextLight = .green
-            yellowLight.backgroundColor = UIColor.yellow.withAlphaComponent(1)
+            yellowLight.alpha = 1
         case .green:
             nextLight = .red
-            greenLight.backgroundColor = UIColor.green.withAlphaComponent(1)
+            greenLight.alpha = 1
         }
     }
     
     private func turnOffLights() {
-        redLight.backgroundColor = UIColor.red.withAlphaComponent(0.3)
-        yellowLight.backgroundColor = UIColor.yellow.withAlphaComponent(0.3)
-        greenLight.backgroundColor = UIColor.green.withAlphaComponent(0.3)
+        redLight.alpha = 0.3
+        yellowLight.alpha = 0.3
+        greenLight.alpha = 0.3
+    }
+}
+
+extension ViewController{
+    enum TrafficLight {
+        case red
+        case yellow
+        case green
     }
 }

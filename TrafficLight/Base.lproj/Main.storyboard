@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gc6-ts-8p4">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gc6-ts-8p4">
                                 <rect key="frame" x="110" y="114" width="100" height="340"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fmW-og-bgq">
@@ -33,16 +33,14 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="VsD-V4-P23" firstAttribute="centerY" secondItem="gc6-ts-8p4" secondAttribute="centerY" id="93b-Tc-3PP"/>
-                                    <constraint firstItem="VsD-V4-P23" firstAttribute="top" secondItem="gc6-ts-8p4" secondAttribute="top" constant="120" id="gBb-te-gTw"/>
                                     <constraint firstAttribute="height" constant="340" id="jJZ-jI-CuE"/>
                                     <constraint firstAttribute="width" constant="100" id="zbr-2B-Qve"/>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IyB-aQ-0rm">
-                                <rect key="frame" x="110" y="520" width="100" height="31"/>
+                                <rect key="frame" x="110" y="484" width="100" height="31"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="6F8-PJ-CsO"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="6F8-PJ-CsO"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button2"/>
@@ -59,7 +57,7 @@
                             <constraint firstItem="IyB-aQ-0rm" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="EFW-Aw-0Vh"/>
                             <constraint firstItem="gc6-ts-8p4" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PqN-Xw-84E"/>
                             <constraint firstItem="IyB-aQ-0rm" firstAttribute="leading" secondItem="gc6-ts-8p4" secondAttribute="trailing" constant="-100" id="bbf-6P-7Ox"/>
-                            <constraint firstItem="IyB-aQ-0rm" firstAttribute="top" secondItem="gc6-ts-8p4" secondAttribute="bottom" constant="66" id="siD-xh-Ll9"/>
+                            <constraint firstItem="IyB-aQ-0rm" firstAttribute="top" secondItem="gc6-ts-8p4" secondAttribute="bottom" constant="30" id="siD-xh-Ll9"/>
                         </constraints>
                     </view>
                     <connections>
